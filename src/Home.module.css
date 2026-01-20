@@ -1,0 +1,526 @@
+/* --- Variables & Reset --- */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1F2937;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* --- Navigation --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoIcon {
+  color: #16A34A; /* Brand Green */
+  font-size: 1.8rem;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #4B5563;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.navLinks a:hover {
+  color: #16A34A;
+}
+
+.loginBtn {
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: #1F2937;
+}
+
+.signupBtn {
+  background-color: #16A34A;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.signupBtn:hover {
+  background-color: #15803D;
+}
+
+/* --- Hero Section --- */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 5%;
+  min-height: 85vh;
+  background: linear-gradient(135deg, #F0FDF4 0%, #FFFFFF 100%);
+}
+
+.heroContent {
+  max-width: 50%;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #DCFCE7;
+  color: #166534;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+.highlight {
+  color: #16A34A;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: #6B7280;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 90%;
+}
+
+.ctaGroup {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.ctaCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ctaLabel {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9CA3AF;
+  font-weight: 600;
+}
+
+.divider {
+  font-weight: 600;
+  color: #D1D5DB;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btnPrimary {
+  background-color: #1F2937;
+  color: white;
+}
+
+.btnPrimary:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+}
+
+.btnSecondary {
+  background-color: white;
+  border: 2px solid #E5E7EB;
+  color: #1F2937;
+}
+
+.btnSecondary:hover {
+  border-color: #16A34A;
+  color: #16A34A;
+  transform: translateY(-2px);
+}
+
+/* --- Hero Visual --- */
+.heroVisual {
+  position: relative;
+  width: 40%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecosystemGraphic {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  animation: pulse 4s infinite ease-in-out;
+}
+
+.statFloat {
+  position: absolute;
+  bottom: 20%;
+  left: -10%;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.statNumber {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #16A34A;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: #6B7280;
+}
+
+/* --- Stats Bar --- */
+.statsBar {
+  background-color: #111827;
+  color: white;
+  padding: 3rem 5%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.statItem h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #4ADE80; /* Brighter Green for dark bg */
+}
+
+.statItem p {
+  color: #9CA3AF;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Ecosystem Section --- */
+.ecosystem {
+  padding: 6rem 5%;
+  background-color: #F9FAFB;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  color: #6B7280;
+  margin-bottom: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #E5E7EB;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: #BBF7D0;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #6B7280;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.gradeBadge {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  background-color: #F3F4F6;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+/* --- Process Section --- */
+.process {
+  padding: 6rem 5%;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 3rem;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.stepNum {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #E5E7EB;
+  margin-bottom: 1rem;
+}
+
+.step h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  color: #6B7280;
+  font-size: 0.9rem;
+}
+
+.stepLine {
+  height: 2px;
+  background-color: #E5E7EB;
+  flex: 0.5;
+  margin-top: 2rem;
+}
+
+/* --- Footer --- */
+.footer {
+  background: linear-gradient(135deg, #111827 0%, #1F2937 100%);
+  color: white;
+  padding: 4rem 5% 2rem;
+  border-top: 2px solid #16A34A;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #16A34A, #22C55E, #16A34A);
+  animation: footerGlow 3s ease-in-out infinite;
+}
+
+@keyframes footerGlow {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footerBrand h2 {
+  color: #22C55E;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(34, 197, 94, 0.3);
+}
+
+.footerBrand p {
+  color: #9CA3AF;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.footerLinks div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footerLinks h4 {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #22C55E;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.footerLinks a {
+  text-decoration: none;
+  color: #D1D5DB;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  padding: 0.25rem 0;
+  border-left: 2px solid transparent;
+  padding-left: 0.75rem;
+}
+
+.footerLinks a:hover {
+  color: #22C55E;
+  border-left-color: #22C55E;
+  transform: translateX(4px);
+}
+
+.copy {
+  text-align: center;
+  color: #6B7280;
+  font-size: 0.85rem;
+  padding: 2rem 0;
+  border-top: 1px solid #374151;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Animations --- */
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1); opacity: 0.2; }
+  100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* Hidden for simple MVP */
+  }
+  
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 2rem;
+  }
+  
+  .heroContent {
+    max-width: 100%;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .ctaGroup {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .ctaCard, .btn {
+    width: 100%;
+  }
+  
+  .heroVisual {
+    display: none;
+  }
+
+  .statsBar {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .steps {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .stepLine {
+    display: none;
+  }
+  
+  .footerContent {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
